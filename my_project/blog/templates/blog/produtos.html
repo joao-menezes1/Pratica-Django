@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Produtos</title>
+</head>
+<body>
+    <h1>Lista de Produtos</h1>
+    <table border="1">
+        <tr>
+            <th>#</th>
+            <th>Nome</th>
+            <th>Preço (R$)</th>
+        </tr>
+        {% for item in produtos %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ item.nome }}</td>
+            <td>{{ item.preco }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
